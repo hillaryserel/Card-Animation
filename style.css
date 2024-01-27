@@ -1,12 +1,15 @@
+/*Global reset*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;   
 }
+/*Body styling */
 body{
     background-color: #eeeeea;
 }
+/*Wrapper for centering content */
 .wrapper{
     width: 100%;
     height: 100vh;
@@ -14,12 +17,14 @@ body{
     align-items: center;
     justify-content: center;
 }
+/*Main container */
 .container{
     height: 400px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: start;
 }
+/*Individual card styling */
 .card{
     width: 80px;
     border-radius: .75rem;
@@ -33,11 +38,13 @@ body{
     transition: .6s cubic-bezier(.28,-0.03,0,.99);
     box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
 }
+/*Row styling inside the card */
 .card > .row {
     color: white;
     display: flex;
     flex-wrap: nowrap;
 }
+/*Icon styling within the row */
 .card > .row > .icon{
     background: #223;
     color: white;
@@ -48,6 +55,7 @@ body{
     align-items: center;
     margin: 15px;
 }
+/* Description styling within the row */
 .card > .row > .description{
     display: flex;
     justify-content: center;
@@ -60,23 +68,29 @@ body{
     transition-delay: .3s;
     transition: all .3s ease;
 }
+/* Paragraph styling within the description */
 .description p {
     color: #b0b0ba;
     padding: 5px;
 }
+/* Heading styling within the description */
 .description h4 {
     text-transform: uppercase;
 }
+/* Hidden input for handling checked state */
 input{
     display: none;
 }
+/* Checked state styling */
 input:checked + label{
     width: 600px;
 }
+/* Checked state styling for description */
 input:checked + label .description{
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
+/* Specific card styling based on the 'for' attribute */
 .card[for="c1"] {
     background-image: url('/Images/image6.jpg');
 }
